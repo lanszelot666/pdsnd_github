@@ -35,10 +35,10 @@ The source code consists of the following operations in order:
 ### Files used
 Source code:    bikeshare.py
 Readme file:    README.md
-Additional data files to be used: chicago.csv, new_york_city.csv and washing.csv
+Additional data files to be used: chicago.csv, new_york_city.csv and washington.csv
 
 ### Credits
-First of all, I would like to thank Udacity for providing this introductory programming course about data science.
+First of all, I would like to thank [Udacity](https://www.udacity.com/) for providing this introductory programming course about data science.
 Further links and repositories that I utilized during my work:
 
  - [Key Error exception descriptions](https://realpython.com/python-keyerror/)
