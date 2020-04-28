@@ -2,6 +2,8 @@ import time
 import pandas as pd
 import numpy as np
 import calendar
+from pyfiglet import Figlet
+
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -23,9 +25,11 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('\n--------------------------------------------------------')
-    print('----  Hello! Let\'s explore some US bikeshare data!  ----')
-    print('--------------------------------------------------------\n')
+    f=Figlet(font='slant')
+    print(f.renderText('US BIKESHARE\n-----------'))
+
+    terminal_menu = TerminalMenu(["entry 1", "entry 2", "entry 3"])
+    terminal_menu.show()
 
     city, month, day = '', '', ''
     # Get user input for city (chicago, new york city, washington)
