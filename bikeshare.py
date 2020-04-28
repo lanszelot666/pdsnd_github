@@ -177,6 +177,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data_display(df):
+    """ Displays the raw data from the csv files if the user needs it """
     row_counter = 5;
     if str(input('Would You like to see the raw data? Type \'yes\' if so: ')).lower() == 'yes':
         print('\n',df.iloc[0:row_counter,:],'\n')
