@@ -28,9 +28,6 @@ def get_filters():
     f=Figlet(font='slant')
     print(f.renderText('US BIKESHARE\n-----------'))
 
-    terminal_menu = TerminalMenu(["entry 1", "entry 2", "entry 3"])
-    terminal_menu.show()
-
     city, month, day = '', '', ''
     # Get user input for city (chicago, new york city, washington)
     while True:
