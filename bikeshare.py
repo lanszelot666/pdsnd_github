@@ -72,12 +72,13 @@ def load_data(city, month, day):
 
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
+    df['End Time'] = pd.to_datetime(df['End Time'])
 
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
     df['weekday_name'] = df['Start Time'].dt.weekday_name
     df['start_hour'] = df['Start Time'].dt.hour
-    df['end_hour'] = df['Start Time'].dt.hour
+    df['end_hour'] = df['End Time'].dt.hour
 
     # filter by month if applicable
     if month != 'All':
@@ -105,6 +106,9 @@ def time_stats(df):
 
     # Display the most common start hour
     print('The most common start hour was:        {}'.format(df['start_hour'].mode()[0]))
+
+    # Display the most common end hour
+    print('The most common end hour was:          {}'.format(df['end_hour'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
